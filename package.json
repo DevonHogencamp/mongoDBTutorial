@@ -1,0 +1,22 @@
+{
+  "name": "mongo",
+  "version": "1.0.0",
+  "description": "A MongoDB tutorial I am working through from the Net Ninja",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DevonHogencamp/mongoDBTutorial.git"
+  },
+  "author": "Devon Hogencamp",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DevonHogencamp/mongoDBTutorial/issues"
+  },
+  "homepage": "https://github.com/DevonHogencamp/mongoDBTutorial#readme",
+  "dependencies": {
+    "mongoose": "^4.7.7"
+  }
+}
