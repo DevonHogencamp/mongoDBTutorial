@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/DevonHogencamp/mongoDBTutorial#readme",
   "dependencies": {
+    "mocha": "^3.2.0",
     "mongoose": "^4.7.7"
   }
 }
