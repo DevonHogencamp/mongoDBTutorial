@@ -1,1 +1,5 @@
-To start MongodDB use the command: mongod --dbpath ~/data
+To start MongodDB use the command:
+
+OSX: mongod --dbpath ~/data
+
+Windows: "C:\Program Files\MongoDB\Server\3.4\bin\mongod.exe"

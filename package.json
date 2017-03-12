@@ -1,23 +1,23 @@
 {
-  "name": "mongo",
-  "version": "1.0.0",
-  "description": "A MongoDB tutorial I am working through from the Net Ninja",
-  "main": "app.js",
-  "scripts": {
-    "test": "mocha"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/DevonHogencamp/mongoDBTutorial.git"
-  },
-  "author": "Devon Hogencamp",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/DevonHogencamp/mongoDBTutorial/issues"
-  },
-  "homepage": "https://github.com/DevonHogencamp/mongoDBTutorial#readme",
-  "dependencies": {
-    "mocha": "^3.2.0",
-    "mongoose": "^4.7.7"
-  }
+    "name": "mongo",
+    "version": "1.0.0",
+    "description": "A MongoDB tutorial I am working through from the Net Ninja",
+    "main": "app.js",
+    "scripts": {
+        "test": "mocha"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/DevonHogencamp/mongoDBTutorial.git"
+    },
+    "author": "Devon Hogencamp",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/DevonHogencamp/mongoDBTutorial/issues"
+    },
+    "homepage": "https://github.com/DevonHogencamp/mongoDBTutorial#readme",
+    "dependencies": {
+        "mocha": "^3.2.0",
+        "mongoose": "^4.7.7"
+    }
 }
