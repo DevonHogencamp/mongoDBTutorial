@@ -3,13 +3,11 @@ var assert = require('assert');
 // Bring in the MarioChar schema
 var MarioChar = require('../models/mariochar');
 /*
-    Saving Test
+    Finding Test
 */
 
-describe('Saving records', function () {
-    // Create tests
-    // done is used to tell mocha we are done with our test in async code
-    it('Saves a record to the database', function (done) {
+describe('Finding records', function () {
+    beforeEach(function (done) {
         // Create an instance of the MarioChar schema
         var char = new MarioChar({
             name: "Mario",
@@ -22,6 +20,16 @@ describe('Saving records', function () {
             assert(char.isNew === false);
 
             // Tell mocha we are done
+            done();
+        });
+    });
+    // Create tests
+    // done is used to tell mocha we are done with our test in async code
+    it('Finds one record from the DB', function (done) {
+        MarioChar.findOne({
+            name: 'Mario'
+        }).then(function (res) {
+            assert(res.name === 'Mario');
             done();
         });
     });
