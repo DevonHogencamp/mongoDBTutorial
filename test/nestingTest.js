@@ -31,4 +31,42 @@ describe('Nesting Records', function (done) {
             });
         });
     });
+
+    // Add on to the already made Author devon
+    it('Adds a book to the Author devon', function (done) {
+        var devon = new Author({
+            name: 'Devon Hogencamp',
+            books: [
+                {
+                    title: 'Best Dev',
+                    pages: 55
+                },
+                {
+                    title: 'Program Better',
+                    pages: 15
+                }
+            ]
+        });
+
+        devon.save().then(function () {
+            Author.findOne({
+                name: 'Devon Hogencamp'
+            }).then(function (res) {
+                // Add a book to the books array
+                res.books.push({
+                    title: 'Jehovahs Qualities',
+                    pages: 100
+                });
+
+                res.save().then(function () {
+                    Author.findOne({
+                        name: 'Devon Hogencamp'
+                    }).then(function () {
+                        assert(res.books.length === 3);
+                        done();
+                    });
+                });
+            });
+        });
+    });
 });
