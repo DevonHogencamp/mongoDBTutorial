@@ -7,9 +7,12 @@ var MarioChar = require('../models/mariochar');
 */
 
 describe('Finding records', function () {
+    // Make this var global so we can access it anywhere
+    var char;
+
     beforeEach(function (done) {
         // Create an instance of the MarioChar schema
-        var char = new MarioChar({
+        char = new MarioChar({
             name: "Mario",
             weight: 150
         });
@@ -30,6 +33,16 @@ describe('Finding records', function () {
             name: 'Mario'
         }).then(function (res) {
             assert(res.name === 'Mario');
+            done();
+        });
+    });
+
+    it('Finds one record by ObjectID from the DB', function (done) {
+        MarioChar.findOne({
+            _id: char._id
+        }).then(function (res) {
+            // toString is used so that we can convert the _id which is an object to a string
+            assert(res._id.toString() === char._id.toString());
             done();
         });
     });
