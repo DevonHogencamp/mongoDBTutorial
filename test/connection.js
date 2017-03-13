@@ -1,6 +1,9 @@
 // Pulling in Mongoose module
 var mongoose = require('mongoose');
 
+// ES6 Promises
+mongoose.Promise = global.Promise;
+
 // Connect to MongoDB
 mongoose.connect('mongodb://localhost/testaroo');
 
