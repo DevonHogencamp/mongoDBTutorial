@@ -6,6 +6,13 @@ var Author = require('../models/author');
 
 //Describee our tests
 describe('Nesting Records', function (done) {
+    // Drop DB before running the tests
+    beforeEach(function (done) {
+        mongoose.connection.collections.authors.drop(function () {
+            done();
+        });
+    });
+
     //Creates tests
     it('Creates and author with sub-documents', function (done) {
         var devon = new Author({
