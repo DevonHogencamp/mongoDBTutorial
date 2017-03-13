@@ -43,4 +43,17 @@ describe('Updating records', function () {
             });
         });
     });
+
+    it('Increment weight by one', function (done) {
+        MarioChar.update({}, {
+            $inc: { weight: 10}
+        }).then(function () {
+            MarioChar.findOne({
+                name: 'Mario'
+            }).then(function (res) {
+                assert(res.weight === 160);
+                done();
+            });
+        });
+    });
 });
